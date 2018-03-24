@@ -15,7 +15,7 @@ for i = n-1 : -1 : 1
     for j = i+1 : n
        sum = sum + a(i,j) * x(j);
     end
-    x(i) = (a(i,n) - sum ) / a(i,i);
+    x(i) = (a(i,n-1) - sum ) / a(i,i);
 end
 disp(a)
 disp(x)
