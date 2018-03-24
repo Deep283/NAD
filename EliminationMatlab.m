@@ -1,5 +1,4 @@
-n = 3
-a = [1 1 1 6 ; 3 4 5 26 ; 1 2 1 8]
+a = [1 1 1 6 ; 3 4 5 26 ; 1 2 1 8];
 for i = 1 : n
     for j = i+1 : n
  	    k = a(j,i)/a(i,i);
@@ -15,9 +14,7 @@ for i = n-1 : -1 : 1
     for j = i+1 : n
        sum = sum + a(i,j) * x(j);
     end
-    x(i) = (a(i,n-1) - sum ) / a(i,i);
+    x(i) = (a(i,n+1) - sum ) / a(i,i);
 end
 disp(a)
 disp(x)
-	
-    
