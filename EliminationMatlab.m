@@ -13,5 +13,9 @@ x(n) = a(n,n+1)/a(n,n)
 for i = n-1 : 0
     sum = 0
     for j = i+1 : n
+       sum = sum + a(i,j) * x(j);
+    end
+    x(i) = (a(i,n) - sum)/(i,i)
+end    
 	
     
