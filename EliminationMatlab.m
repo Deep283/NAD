@@ -8,14 +8,16 @@ for i = 1 : n
 	    end
     end
 end
-x = [ 0 0 0 ]
-x(n) = a(n,n+1)/a(n,n)
-for i = n-1 : 0
-    sum = 0
+x = [ 0 0 0 ];
+x(n) = a(n,n+1)/a(n,n);
+for i = n-1 : -1 : 1
+    sum = 0;
     for j = i+1 : n
        sum = sum + a(i,j) * x(j);
     end
-    x(i) = (a(i,n) - sum)/(i,i)
-end    
+    x(i) = (a(i,n) - sum ) / a(i,i);
+end
+disp(a)
+disp(x)
 	
     
